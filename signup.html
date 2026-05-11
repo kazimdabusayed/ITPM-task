@@ -1,25 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Signup Page</title>
-</head>
-<body>
-  <h2>Signup</h2>
-  <form>
-    <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username" required><br><br>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign Up | TaskMaster</title>
+		<link rel="icon" type="image/png" href="logo.png" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="welcome-container">
+			<div class="header-section">
+				<div class="logo-container">
+					<img src="logo.png" alt="TaskMaster Logo" class="app-logo" />
+				</div>
+				<h1>Create Account</h1>
+				<p>Join TaskMaster to start organizing.</p>
+			</div>
 
-    <label for="gmail">Gmail:</label><br>
-    <input type="email" id="gmail" name="gmail" required><br><br>
+			<form action="/register" class="auth-form">
+				<div class="form-group">
+					<label for="username">Username</label>
+					<input
+						type="text"
+						id="username"
+						name="username"
+						placeholder="Choose a unique username"
+						required
+					/>
+				</div>
 
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password" required><br><br>
+				<div class="form-group">
+					<label for="email">Email Address</label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="name@company.com"
+						required
+					/>
+				</div>
 
-    <label for="confirm-password">Confirm Password:</label><br>
-    <input type="password" id="confirm-password" name="confirm-password" required><br><br>
+				<div class="form-group">
+					<label for="password">Create Password</label>
+					<input
+						type="password"
+						id="password"
+						name="password"
+						placeholder="At least 8 characters"
+						required
+					/>
+				</div>
 
-    <button type="submit">Sign Up</button>
-  </form>
-</body>
+				<div class="form-group">
+					<label for="confirm-password">Confirm Password</label>
+					<input
+						type="password"
+						id="confirm-password"
+						name="confirm-password"
+						placeholder="Repeat your password"
+						required
+					/>
+				</div>
+
+				<button type="submit" class="btn btn-primary">
+					Register Account
+				</button>
+			</form>
+
+			<div class="footer-link">
+				<p>Already have an account? <a href="signin.html">Sign In</a></p>
+				<p>
+					<a href="index.html" class="back-home">← Back to Home</a>
+				</p>
+			</div>
+		</div>
+	</body>
 </html>

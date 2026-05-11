@@ -107,9 +107,90 @@ p {
 	background: #edf2f7;
 }
 
+/* --- Form Layout (for Sign In / Sign Up pages) --- */
+.auth-form {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	width: 100%;
+}
+
+.auth-form .btn {
+	margin-top: 8px;
+}
+
+.form-group {
+	margin-bottom: 10px;
+}
+
+.form-group label {
+	display: block;
+	font-size: 0.75rem;
+	font-weight: 700;
+	margin-bottom: 4px;
+	color: #4a5568;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.form-group input {
+	width: 100%;
+	padding: 8px 12px;
+	font-size: 0.9rem;
+	border: 1px solid #edf2f7;
+	border-radius: 8px;
+	background-color: #f8fafc;
+	color: #2d3436;
+	transition: all 0.2s ease-in-out;
+}
+
+.form-group input:focus {
+	outline: none;
+	border-color: #6c5ce7;
+	background-color: #ffffff;
+	box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+/* forgot password */
+.forgot-link-container {
+	text-align: right;
+	margin-top: 6px;
+}
+
+.forgot-password {
+	font-size: 0.85rem;
+	color: #6c5ce7;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.forgot-password:hover {
+	text-decoration: underline;
+}
+
 /* --- Footer & Misc Links --- */
 footer {
 	margin-top: 15px;
 	font-size: 0.75rem;
 	color: #b2bec3;
+}
+
+.footer-link {
+	margin-top: 10px;
+	font-size: 0.85rem;
+	color: #718096;
+}
+
+.footer-link a {
+	color: #6c5ce7;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.back-home {
+	display: inline-block;
+	margin: auto;
+	color: #b2bec3 !important;
+	font-size: 0.75rem;
+	text-decoration: none;
 }
