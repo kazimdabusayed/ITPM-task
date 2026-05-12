@@ -1,1 +1,41 @@
+# Routing Task
 
+This folder contains a simple routing example for student data using Node.js and Express.
+
+<!-- ## Project Structure
+
+- `backend/`
+  - `package.json` — backend dependencies and scripts
+  - `server.js` — Node.js server with routing logic
+  - `students.js` — student data module and route handler
+- `frontend/`
+  - `index.html` — basic frontend to test routes or display data
+
+## How to Run
+
+1. Open a terminal in `routing_task/backend/`.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the server:
+   ```bash
+   node server.js
+   ```
+4. The backend server should run on `http://localhost:3000` by default. -->
+
+## API Routes
+
+### GET `/student`
+
+Returns student information from the backend.
+
+- URL: `http://localhost:3000/student`
+- Method: `GET`
+- Response: JSON data for student records.
+
+### Example Output
+
+Below is a placeholder for the screenshot of the output shown when hitting the `/student` API route.
+
+![alt text](hitting_student_api_route.png)
