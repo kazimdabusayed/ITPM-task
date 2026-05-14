@@ -27,3 +27,6 @@ All endpoints were tested using Thunder Client.
 ![Update Todo Test](./screenshots/update-todo.png)
 
 ---
+
+#### Delete Todo
+![Delete Todo Test](./screenshots/delete-todo.png)

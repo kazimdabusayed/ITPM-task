@@ -71,6 +71,21 @@ app.put('/api/todos/:id', (req, res) => {
    res.json(todos[todoIndex]);
 });
 
+// 5. Delete todo
+app.delete('/api/todos/:id', (req, res) => {
+	let todos = readTodos();
+	const idToMatch = parseInt(req.params.id);
+	const todoExists = todos.some((t) => t.id === idToMatch);
+
+	if (!todoExists) {
+		return res.status(404).json({ error: 'Todo not found' });
+	}
+
+	const updatedTodos = todos.filter((t) => t.id !== idToMatch);
+	writeTodos(updatedTodos);
+	res.json({ message: 'Todo deleted successfully' });
+});
+
 app.listen(PORT, () => {
 	console.log(`Server running at http://localhost:${PORT}`);
 });
