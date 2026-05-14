@@ -10,7 +10,7 @@ const DATA_FILE = path.join(__dirname, 'todos.json');
 
 // Load todos from file
 const readTodos = () => {
-   const data = fs.readFileSync(DATA_FILE);
+   const data = fs.readFileSync(DATA_FILE, 'utf-8');
    return JSON.parse(data);
 };
 
@@ -38,17 +38,37 @@ app.get('/api/todos/:id', (req, res) => {
 // 3. Create a new todo
 app.post('/api/todos', (req, res) => {
    const todos = readTodos();
+   const {topic, task, priority, status, deadline} = req.body;
+
+   if (!topic || !task) {
+		return res.status(400).json({
+			error: 'Topic and task are required',
+		});
+	}
+
    const newTodo = {
       id: todos.length ? todos[todos.length - 1].id + 1 : 1,
-      topic: req.body.topic,
-      task: req.body.task,
-      priority: req.body.priority || 'Medium',
-      status: req.body.status || 'Pending',
-      dateline: req.body.dateline || null
+      topic,
+      task,
+      priority: priority || 'Medium',
+      status: status || 'Pending',
+      deadline: deadline || null
    };
    todos.push(newTodo);
    writeTodos(todos);
    res.status(201).json(newTodo);
+});
+
+// 4. Update todo
+app.put('/api/todos/:id', (req, res) => {
+   const todos = readTodos();
+   const todoIndex = todos.findIndex(t => t.id === parseInt(req.params.id));
+   if (todoIndex === -1) {
+      return res.status(404).json({ error: 'Todo not found' });
+   }
+   todos[todoIndex] = { ...todos[todoIndex], ...req.body };
+   writeTodos(todos);
+   res.json(todos[todoIndex]);
 });
 
 app.listen(PORT, () => {
