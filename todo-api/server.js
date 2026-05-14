@@ -35,6 +35,22 @@ app.get('/api/todos/:id', (req, res) => {
    res.json(todo);
 });
 
+// 3. Create a new todo
+app.post('/api/todos', (req, res) => {
+   const todos = readTodos();
+   const newTodo = {
+      id: todos.length ? todos[todos.length - 1].id + 1 : 1,
+      topic: req.body.topic,
+      task: req.body.task,
+      priority: req.body.priority || 'Medium',
+      status: req.body.status || 'Pending',
+      dateline: req.body.dateline || null
+   };
+   todos.push(newTodo);
+   writeTodos(todos);
+   res.status(201).json(newTodo);
+});
+
 app.listen(PORT, () => {
 	console.log(`Server running at http://localhost:${PORT}`);
 });
