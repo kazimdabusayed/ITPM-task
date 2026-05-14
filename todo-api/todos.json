@@ -1,42 +1,50 @@
 [
-	{
-		"id": 1,
-		"topic": "Academic",
-		"task": "Submit Operating Systems Lab Report",
-		"priority": "High",
-		"status": "Pending",
-		"deadline": "2024-05-25"
-	},
-	{
-		"id": 2,
-		"topic": "Personal",
-		"task": "Pay monthly mess bill",
-		"priority": "Medium",
-		"status": "Completed",
-		"deadline": "2024-05-20"
-	},
-	{
-		"id": 3,
-		"topic": "Club Activity",
-		"task": "Organize Programming Contest Seminar",
-		"priority": "High",
-		"status": "In-Progress",
-		"deadline": "2024-06-01"
-	},
-	{
-		"id": 4,
-		"topic": "Self-Improvement",
-		"task": "Practice 5 LeetCode problems",
-		"priority": "Low",
-		"status": "Pending",
-		"deadline": "2024-05-22"
-	},
-	{
-		"id": 5,
-		"topic": "Health",
-		"task": "Evening Football Session",
-		"priority": "Medium",
-		"status": "In-Progress",
-		"deadline": "2024-05-21"
-	}
+  {
+    "id": 1,
+    "topic": "Academic",
+    "task": "Submit Operating Systems Lab Report",
+    "priority": "High",
+    "status": "Pending",
+    "deadline": "2024-05-25"
+  },
+  {
+    "id": 2,
+    "topic": "Personal",
+    "task": "Pay monthly mess bill",
+    "priority": "Medium",
+    "status": "Completed",
+    "deadline": "2024-05-20"
+  },
+  {
+    "id": 3,
+    "topic": "Club Activity",
+    "task": "Organize Programming Contest Seminar",
+    "priority": "High",
+    "status": "In-Progress",
+    "deadline": "2024-06-01"
+  },
+  {
+    "id": 4,
+    "topic": "Self-Improvement",
+    "task": "Practice 5 LeetCode problems",
+    "priority": "Low",
+    "status": "Pending",
+    "deadline": "2024-05-22"
+  },
+  {
+    "id": 5,
+    "topic": "Health",
+    "task": "Evening Football Session",
+    "priority": "Medium",
+    "status": "In-Progress",
+    "deadline": "2024-05-21"
+  },
+  {
+    "id": 6,
+    "topic": "Study",
+    "task": "Complete API assignment",
+    "priority": "High",
+    "status": "Pending",
+    "deadline": "2026-05-20"
+  }
 ]
